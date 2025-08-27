@@ -1,0 +1,154 @@
+import os,pip
+import random
+import sys
+import time
+import names
+
+#os.system('clear')
+time.sleep(0.1)
+print("\33[93m" + """⣿⣿⠿⠿⠿⠿⣿⣷⣂⠄⠄⠄⠄⠄⠄⠈⢷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣷⡾⠯⠉⠉⠉⠉⠚⠑⠄⡀⠄⠄⠄⠄⠄⠈⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⡀⠄⠄⠄⠄⠄⠄⠄⠄⠉⠻⣿⣿⣿⣿⣿⣿⣿
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠎⠄⠄⣀⡀⠄⠄⠄⠄⠄⠄⠄⠘⠋⠉⠉⠉⠉⠭
+⡀⠄⠄⠄⠄⠄⠄⠄⠄⡇⠄⣠⣾⣳⠁⠄⠄⢺⡆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⣿⣷⡦⠄⠄⠄⠄⠄⢠⠃⢰⣿⣯⣿⡁⢔⡒⣶⣯⡄⢀⢄⡄⠄⠄⠄⠄⠄⣀
+⠓⠄⠄⠄⠄⠄⠸⠄⢀⣤⢘⣿⣿⣷⣷⣿⠛⣾⣿⣿⣆⠾⣷⠄⠄⠄⠄⢀⣀
+⠄⠄⠄⠄⠄⠄⠄⠑⢘⣿⢰⡟⣿⣿⣷⣫⣭⣿⣾⣿⣿⣴⠏⠄⠄⢀⣺⣿⣿
+⣿⣿⣿⣿⣷⠶⠄⠄⠄⠹⣮⣹⡘⠛⠿⣫⣾⣿⣿⣿⡇⠑⢤⣶⣿⣿⣿⣿⣿
+⣿⣿⣿⣯⣤⣤⣤⣤⣀⣀⡹⣿⣿⣷⣯⣽⣿⣿⡿⣋⣴⡀⠈⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣝⡻⢿⣿⡿⠋⡒⣾⣿⣧⢰⢿⣿⣿⣿⣿⣿
+""" + "\33[0m")
+print("""\33[95m 𓃭ꉔꋪꏂꋬ꒯ꄲꋪ ꒯ꏂ ꉔꄲꂵꃳꄲꇙ & ꂵ3꒤ ꏂꇙꉔꋬꋊꏂꋪ𓃸 𓁹𓁹Samael𓁹𓁹 \33[0m""")
+time.sleep(0.1)
+print ("""
+TIPO DE COMBO PARA HACER??
+
+1)USER:PASS 1990 AL 2025
+
+2)USER:PASS SIMPLE NOMBRE-NOMBRE
+
+3)USER:PASS CON NUMEROS
+
+4)USER:PASS CON AÑO DE NACIMIENTO
+
+5)Exit.
+""")
+menu = input("Ingrese su Opción ")
+
+if menu=="1":
+	print ("\t\t\33[1;33m no hace falta el (.txt)  \33[36m ")
+	filename = input("\nNombre su Combo  : ")
+	hwm = int(input("numero de lineas (x2): "))
+	i=1
+	for i in range (0,hwm):
+		i = 1+1
+		rname = names.get_first_name()
+		rlastname = names.get_last_name()
+		num = random.randint(1990,2025)
+		all1 = "%s%s"%(rname,num)
+		alln = "%s%s%s%s"%(all1,":",rlastname,num)
+		all2 = "%s%s"%(rlastname,num)
+		allf = "%s%s%s%s"%(all1,":",rname,num) 
+		print(alln)
+		print(allf)
+		F ="/sdcard/Combo/"+filename+"ᶠʳᶦᵉⁿᵈˢ.txt"
+		f = open(F, "a+",encoding= "utf-8")
+		f.write(alln)
+		f.write("\n")
+		f.write(allf)
+		f.write("\n")
+		f.close()
+		i += 1
+		
+
+if menu=="2":
+	print ("\t\t\33[1;33m no hace falta el (.txt)  \33[36m ")
+	filename = input("\nNombre su Combo  :  ")
+	hwm = int(input("cuantas lineas? (x2): "))
+	i=1
+	for i in range (0,hwm):
+		i = 1+1
+		rname = names.get_first_name()
+		rlastname = names.get_last_name()
+		num = random.randint(0,499)
+		all1 = "%s"%(rname)
+		alln = "%s%s%s"%(all1,":",rname)
+		all2 = "%s"%(rlastname)
+		allf = "%s%s%s"%(all2,":",rlastname)
+		print(alln)
+		print(allf)
+		F ="/sdcard/Combo/"+filename+"ᶠʳᶦᵉⁿᵈˢ.txt"
+		f = open(F, "a+",encoding= "utf-8")
+		f.write(alln)
+		f.write("\n")
+		f.write(allf)
+		f.write("\n")
+		f.close()
+		i += 1
+
+
+if menu=="3":
+	print ("\t\t\33[1;33m  no hace falta el (.txt)\33[36m ")
+	filename = input("\nNombre su Combo  :  ")
+	hwm = int(input("cuantas lineas (x2): "))
+	i=1
+	for i in range (0,hwm):
+		i = 1+1
+		rname = names.get_first_name()
+		rlastname = names.get_last_name()
+		num = random.randint(0,499)
+		all1 = "%s%s"%(rname,num)
+		alln = "%s%s%s%s"%(all1,":",rname,num)
+		all2 = "%s%s"%(rlastname,num)
+		allf = "%s%s%s%s"%(all2,":",rlastname,num)
+		print(alln)
+		print(allf)		
+		F ="/sdcard/Combo/"+filename+"ᶠʳᶦᵉⁿᵈˢ.txt"
+		f = open(F, "a+",encoding= "utf-8")
+		f.write(alln)
+		f.write("\n")
+		f.write(allf)
+		f.write("\n")
+		f.close()
+	
+
+if menu=="4":
+	print ("\t\t\33[1;33m no hace falta (.txt)   \33[36m ")
+	filename = input("\n Nombre su combo Combo  :  ")
+	hwm = int(input("numero de lineas (x2): "))
+	i=1
+	for i in range (0,hwm):
+		i = 1+1
+		rname = names.get_first_name()
+		rlastname = names.get_last_name()
+		num = random.randint(1900,2023)
+		all1 = "%s%s"%(rname,num)
+		alln = "%s%s%s%s"%(all1,":",rname,num)
+		all2 = "%s%s"%(rlastname,num)
+		allf = "%s%s%s%s"%(all2,":",rlastname,num)
+		print(alln)
+		print(allf)
+		F ="/sdcard/Combo/"+filename+"ᶠʳᶦᵉⁿᵈˢ.txt"
+		f = open(F, "a+",encoding= "utf-8")
+		f.write(alln)
+		f.write("\n")
+		f.write(allf)
+		f.write("\n")
+		f.close()
+		i += 1
+   
+
+
+print ("\33[1;37;33m")
+print (f," NOMBRE DE SU COMBO REGISTRADO EN ALMACENAMIENTO SATISFACTORIAMENTE: ",f,)
+print ("\33[36m")
+
+
+
+		
+			
+					
+if menu=="99":
+     quit()
+
+	
